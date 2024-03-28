@@ -21,7 +21,7 @@
   --body-font: "Open Sans", sans-serif;
 
   /* FONT SIZE */
-  --big-font-size: 42px;
+  --big-font-size: 30px;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -167,6 +167,7 @@ img {
 /* NAVIGATION */
 .nav__container {
   position: fixed;
+  top: 0;
   padding: 1.688rem 0.813rem;
   width: 80%;
   height: 100vh;
@@ -241,6 +242,7 @@ img {
 #head {
   position: fixed;
   z-index: var(--z-fixed);
+  top: 0;
 }
 
 .head__container {
@@ -282,7 +284,90 @@ img {
 }
 
 /* MAIN BODY  */
+#main {
+  margin-top: 65px;
+}
+#banner {
+  overflow: hidden;
+}
 .banner__container {
-  transform: translateY(70px);
   background-color: var(--primary-color);
+  padding: 0 15px 0 15px;
+}
+
+.banner__data {
+  display: flex;
+  flex-direction: column;
+}
+.banner__header {
+  font-size: var(--big-font-size);
+  color: var(--body-color);
+  line-height: 2rem;
+}
+
+.banner__content {
+  padding: 20px 0 20px 0;
+}
+
+.banner__title {
+  font-weight: 800;
+}
+
+.banner__subtitle {
+  line-height: 2.5rem;
+  -webkit-text-fill-color: var(--primary-color);
+  -webkit-text-stroke-width: 1px;
+  font-weight: 800;
+  -webkit-text-stroke-color: var(--body-color);
+}
+.banner__service-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.04167rem 0 1.04167rem 0;
+  gap: 0.8rem;
+  color: var(--body-color);
+}
+.banner__service-icon {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  padding: 8px;
+  background-color: var(--body-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__service-icon div {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  filter: invert(85%) sepia(15%) saturate(2054%) hue-rotate(173deg)
+    brightness(80%) contrast(100%);
+}
+.banner__service {
+  display: grid;
+  column-gap: 1.5625rem;
+  grid-template-columns: max-content repeat(1, 1fr);
+}
+.banner__button {
+  margin-top: 1.5625rem;
+  padding: 10px 15px 10px 15px;
+  background-color: var(--button-color);
+  display: flex;
+  width: 35%;
+}
+.banner__button a {
+  color: var(--body-color);
+  font-weight: 700;
+  flex: 1;
 }
