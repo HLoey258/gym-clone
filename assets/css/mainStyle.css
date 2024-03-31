@@ -107,7 +107,10 @@ img {
 }
 
 /* Key FRAMES */
-@keyframes fadeOut {
+
+/* FADE ANIMATION */
+/* FORM LEFT TO RIGHT (LR) */
+@keyframes fadeOut-LR {
   from {
     transform: translateX(0px);
   }
@@ -115,12 +118,36 @@ img {
     transform: translateX(-100vw);
   }
 }
-@keyframes fadeIn {
+@keyframes fadeIn-LR {
   from {
     transform: translateX(-100vw);
   }
   to {
     transform: translateX(0px);
+  }
+}
+/* FROM TOP TO DOWN (TD) */
+@keyframes fadeOut-TD {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateY(45%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* FROM DOWN TO TOP  */
+@keyframes fadeIn-DT {
+  from {
+    transform: translateY(45%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
 
@@ -138,18 +165,21 @@ img {
   padding: 35px 0;
 }
 
+.section__fw {
+  font-weight: 800;
+}
+
 .section__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--big-font-size);
+  text-transform: uppercase;
+  line-height: 35px;
 }
 
 .section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
-.section__title,
-.section__subtitle {
-  text-align: center;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight: 800;
 }
 
 /* LAYOUT */
@@ -177,12 +207,12 @@ img {
   background-color: var(--body-color);
   z-index: var(--z-model);
   transform: translateX(-1000vw);
-  animation: fadeOut 0.3s ease-out;
+  animation: fadeOut-LR 0.3s ease-out;
 }
 
 .nav-show {
   transform: translateX(0px);
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn-LR 0.3s ease-out;
 }
 
 .nav__logo {
@@ -290,6 +320,7 @@ img {
 }
 #banner {
   overflow: hidden;
+  position: relative;
 }
 .banner__container {
   background-color: var(--primary-color);
@@ -412,7 +443,6 @@ img {
 /*  REASON SECTION  */
 #reason {
   background-color: var(--body-color);
-  position: absolute;
   z-index: 1;
 }
 
@@ -425,6 +455,7 @@ img {
   text-transform: uppercase;
   line-height: 35px;
 }
+
 .reason__title h1 {
   font-weight: 800;
 }
@@ -459,6 +490,16 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  visibility: hidden;
+  animation: fadeOut-TD 0.7s ease-out;
+}
+.reason-list-animation-deactive {
+  visibility: visible;
+  animation: fadeOut-TD 0.7s ease-out;
+}
+.reason-list-animation-active {
+  visibility: visible;
+  animation: fadeIn-DT 0.7s ease-out;
 }
 .reason__icon::after {
   position: absolute;
@@ -478,7 +519,7 @@ img {
 
 .reason__desc {
   text-align: center;
-  line-height: 35px;
+  line-height: 27px;
   font-weight: 600;
   font-size: 14px;
 }

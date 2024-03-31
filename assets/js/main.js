@@ -16,3 +16,38 @@ navCloseButton.addEventListener("click", () => {
   overLay.classList.remove("body-overlay-active");
   headerLogo.classList.remove("nav-logo-show");
 });
+
+// Animation for reason item
+const reasonItems = document.querySelectorAll(".reason__list-item");
+
+const scrollReasonActive = () => {
+  const scrollY = document.documentElement.scrollTop;
+
+  reasonItems.forEach((reason) => {
+    const currentReasonHeight = reason.offsetHeight;
+    const currentTopHeight = reason.offsetTop - 300;
+    const currentReasonItem = reason.getAttribute("id");
+    console.log(
+      "reasonH: ",
+      currentReasonHeight,
+      "ctopH: ",
+      currentTopHeight,
+      " scY: ",
+      scrollY
+    );
+    if (
+      scrollY > currentTopHeight &&
+      scrollY <= currentTopHeight + currentReasonHeight
+    ) {
+      document
+        .querySelector(`.reason__list #${currentReasonItem}`)
+        .classList.add("reason-list-animation-active");
+    } else if (scrollY < currentTopHeight) {
+      document
+        .querySelector(`.reason__list #${currentReasonItem}`)
+        .classList.remove("reason-list-animation-active");
+    }
+  });
+};
+
+window.addEventListener("scroll", scrollReasonActive);
