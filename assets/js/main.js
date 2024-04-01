@@ -19,22 +19,13 @@ navCloseButton.addEventListener("click", () => {
 
 // Animation for reason item
 const reasonItems = document.querySelectorAll(".reason__list-item");
-
 const scrollReasonActive = () => {
   const scrollY = document.documentElement.scrollTop;
-
   reasonItems.forEach((reason) => {
     const currentReasonHeight = reason.offsetHeight;
-    const currentTopHeight = reason.offsetTop - 300;
+    const currentTopHeight = reason.offsetTop - 450;
     const currentReasonItem = reason.getAttribute("id");
-    console.log(
-      "reasonH: ",
-      currentReasonHeight,
-      "ctopH: ",
-      currentTopHeight,
-      " scY: ",
-      scrollY
-    );
+
     if (
       scrollY > currentTopHeight &&
       scrollY <= currentTopHeight + currentReasonHeight
@@ -42,7 +33,7 @@ const scrollReasonActive = () => {
       document
         .querySelector(`.reason__list #${currentReasonItem}`)
         .classList.add("reason-list-animation-active");
-    } else if (scrollY < currentTopHeight) {
+    } else if (scrollY < currentTopHeight - 150) {
       document
         .querySelector(`.reason__list #${currentReasonItem}`)
         .classList.remove("reason-list-animation-active");
@@ -51,3 +42,10 @@ const scrollReasonActive = () => {
 };
 
 window.addEventListener("scroll", scrollReasonActive);
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+});

@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="../assets/css/mainStyle.css" />
+
     <!-- RESET CSS -->
     <link rel="stylesheet" href="../assets/css/cssReset.css" />
+
     <!-- FAVICON -->
     <link
       rel="shortcut icon"
       href="../assets/img/favicon.png"
       type="image/x-icon"
     />
+
     <!-- ICONSCOUT -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
-    <!-- Font Awsome -->
+
+    <!-- FONT AWSOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -26,16 +31,25 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- UNICONS -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
+
+    <!-- SWIPER CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>The New Gym - Gym open 24/7</title>
   </head>
   <body>
+    <!-- OVERLAY -->
     <div id="body-overlay" class=""></div>
-    <!-- HEADER / NAVIGATION -->
+
+    <!-- ======= HEADER ======= -->
     <header id="head">
       <div class="head__container">
         <div class="head__menu">
@@ -51,6 +65,8 @@
         </div>
       </div>
     </header>
+
+    <!-- ======= NAVIGATION ======= -->
     <nav class="nav__container">
       <div class="nav__toggle">
         <i class="fa-solid fa-xmark"></i>
@@ -84,9 +100,10 @@
         </ul>
       </div>
     </nav>
+
     <!-- MAIN BODY -->
     <main id="main">
-      <!-- BANNER -->
+      <!-- ======= SECTION: BANNER ======= -->
       <section id="banner">
         <div class="banner__container container">
           <div class="banner__data">
@@ -167,6 +184,8 @@
           </div>
         </div>
       </section>
+
+      <!-- ======= SECTION: REASON ======= -->
       <section id="reason" class="section">
         <div class="reason__container container">
           <div class="reason__title">
@@ -259,17 +278,239 @@
           </div>
         </div>
       </section>
+
+      <!-- ======= SECTION: TRAINNING ZONE ======= -->
       <section id="zone" class="section">
-        <div class="zone__container container">
-          <div class="zone__title section__title">
+        <div class="zone__container">
+          <!-- Zone Title -->
+          <div class="zone__title section__title container">
             <h1 class="section__fw">Tranning</h1>
-            <h2 class="section__subtitle">Zone</h2>
+            <div class="flex-box-row-center">
+              <h2 class="section__subtitle">Zones</h2>
+              <div class="zone__slide-btn-container flex-box-row-center">
+                <a href="" class="zone__btn button-prev">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a href="" class="zone__btn button-next">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Zone img -->
+          <div class="zone__data swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/tranning-zone-cardio.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div id="zone-cardio" class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>CARDIO</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        Cardiovascular exercises such as jogging, cycling,
+                        rowing, and climbing are effective methods to lose
+                        weight, and burn fat and calories.
+                      </p>
+                      <h2>cardio</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/tranning-zone-functional.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div id="zone-functional" class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>FUNCTIONAL</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        Functional training helps to return misaligned movements
+                        to their original form, making everyday activities
+                        easier and safer.
+                      </p>
+                      <h2>FUNCTIONAL</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/tranning-zone-lady.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div id="zone-lady" class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>LADIES ONLY</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        The women’s workout area creates a safe and separate
+                        space
+                      </p>
+                      <h2>LADIES ONLY</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/tranning-zone-fw.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div id="zone-fw" class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>FREE weights</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        Free weights training (dumbbells and plates) help
+                        improving strength condition, increasing muscle size,
+                        and training balance and stability in motion.
+                      </p>
+                      <h2>FREE weights</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/tranning-zone-strength.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div id="zone-strength" class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>STRENGTH</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        The different weight training equipment in the Strength
+                        zone will help you work on all your muscle groups with
+                        the cable movement.
+                      </p>
+                      <h2>STRENGTH</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/tranning-zone-stretching.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div id="zone-stretching" class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>STRETCHING</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        The Stretching zone is intended for stretching and
+                        exercising the core muscles with equipments such as gym
+                        balls, foam rollers…
+                      </p>
+                      <h2>STRETCHING</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="zone-group" class="swiper-slide">
+                <div class="zone__content">
+                  <div class="zone__img-container">
+                    <img
+                      class="zone-img"
+                      src="../assets/img/trainning-zone-groupclasses.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="zone__box-desc">
+                  <div class="zone__box-data">
+                    <div class="zone__box-title">
+                      <p>GROUP CLASSES</p>
+                    </div>
+                    <div class="zone__box-content">
+                      <p>
+                        All classes are free (Yoga, New Pump, New Combat, Zumba,
+                        Sexy Dance, New Dance), qualified instructors help you
+                        exercise in proper form.
+                      </p>
+                      <h2>STUDIO</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= SECTION: MEMBERSHIP ======= -->
+      <section id="membership" class="section">
+        <div class="membership__container">
+          <div class="membership section__title container">
+            <h1 class="section__fw">The new gym</h1>
+            <div class="flex-box-row-center">
+              <h2 class="section__subtitle">membership</h2>
+              <div class="zone__slide-btn-container flex-box-row-center">
+                <a href="" class="zone__btn">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a href="" class="zone__btn zone__btn-active">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
   </body>
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <!-- ========== SCRIPT ========== -->
+
+  <!-- SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- MAIN SCRIPT -->
   <script src="../assets/js/main.js"></script>
 </html>
