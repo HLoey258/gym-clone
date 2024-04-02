@@ -31,7 +31,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <!-- UNICONS -->
     <link
       rel="stylesheet"
@@ -45,6 +44,7 @@
     />
     <title>The New Gym - Gym open 24/7</title>
   </head>
+
   <body>
     <!-- OVERLAY -->
     <div id="body-overlay" class=""></div>
@@ -283,15 +283,15 @@
       <section id="zone" class="section">
         <div class="zone__container">
           <!-- Zone Title -->
-          <div class="zone__title section__title container">
+          <div class="section__title container">
             <h1 class="section__fw">Tranning</h1>
             <div class="flex-box-row-center">
               <h2 class="section__subtitle">Zones</h2>
-              <div class="zone__slide-btn-container flex-box-row-center">
-                <a href="" class="zone__btn button-prev">
+              <div class="slide-btn-container flex-box-row-center">
+                <a href="" class="slide-btn button-prev-zone">
                   <i class="fa-solid fa-arrow-left"></i>
                 </a>
-                <a href="" class="zone__btn button-next">
+                <a href="" class="slide-btn button-next-zone">
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
@@ -455,7 +455,7 @@
                   </div>
                 </div>
               </div>
-              <div id="zone-group" class="swiper-slide">
+              <div class="swiper-slide">
                 <div class="zone__content">
                   <div class="zone__img-container">
                     <img
@@ -465,7 +465,7 @@
                     />
                   </div>
                 </div>
-                <div class="zone__box-desc">
+                <div id="zone-group" class="zone__box-desc">
                   <div class="zone__box-data">
                     <div class="zone__box-title">
                       <p>GROUP CLASSES</p>
@@ -493,13 +493,333 @@
             <h1 class="section__fw">The new gym</h1>
             <div class="flex-box-row-center">
               <h2 class="section__subtitle">membership</h2>
-              <div class="zone__slide-btn-container flex-box-row-center">
-                <a href="" class="zone__btn">
+              <div class="slide-btn-container flex-box-row-center">
+                <a href="" class="slide-btn button-prev button-prev-member">
                   <i class="fa-solid fa-arrow-left"></i>
                 </a>
-                <a href="" class="zone__btn zone__btn-active">
+                <a href="" class="slide-btn button-next button-next-member">
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="membership__data swiper mySwiper-membership">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="membership__wrapper">
+                <div class="membership__content">
+                  <div id="one-month" class="membership__img">
+                    <div class="img-wrap">
+                      <img
+                        src="../assets/img/membership1.png"
+                        alt=""
+                        class="membership-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="membership__details">
+                  <div class="membership-detail__title">
+                    <h2>1 month</h2>
+                    <div class="membership-detail__icon">
+                      <svg
+                        class="triple-arrow"
+                        width="105"
+                        height="36"
+                        viewBox="0 0 105 36"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M84.9945 0L66.9999 18.003L84.9884 36H104.994L87.0054 18.003L105 0H84.9945Z"
+                          fill="url(#paint0_linear_622_5547)"
+                        ></path>
+                        <path
+                          d="M51.9945 0L34 18.003L51.9884 36H71.9939L54.0055 18.003L72 0H51.9945Z"
+                          fill="#06A9D6"
+                        ></path>
+                        <path
+                          d="M17.9945 0L0 18.003L17.9869 36H37.9939L20.0055 18.003L38 0H17.9945Z"
+                          fill="#F36F2D"
+                        ></path>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_622_5547"
+                            x1="105"
+                            y1="17.9997"
+                            x2="66.9998"
+                            y2="17.9997"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#8AF43D"></stop>
+                            <stop offset="1" stop-color="#CBED3A"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="membership-detail__content">
+                    <ul class="detail-list">
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Affordable price</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Monthly payment</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Unlimited training</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free parking</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free classes</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free drinking water</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free PT induction sessions</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="membership-register__btn">
+                    <a href="" class="register-btn">register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="membership__wrapper">
+                <div class="membership__content">
+                  <div id="six-month" class="membership__img">
+                    <div class="img-wrap">
+                      <img
+                        src="../assets/img/membership2.png"
+                        alt=""
+                        class="membership-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="membership__details">
+                  <div class="membership-detail__title">
+                    <h2>6 months</h2>
+                    <div class="membership-detail__icon">
+                      <svg
+                        class="triple-arrow"
+                        width="105"
+                        height="36"
+                        viewBox="0 0 105 36"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M84.9945 0L66.9999 18.003L84.9884 36H104.994L87.0054 18.003L105 0H84.9945Z"
+                          fill="url(#paint0_linear_622_5547)"
+                        ></path>
+                        <path
+                          d="M51.9945 0L34 18.003L51.9884 36H71.9939L54.0055 18.003L72 0H51.9945Z"
+                          fill="#06A9D6"
+                        ></path>
+                        <path
+                          d="M17.9945 0L0 18.003L17.9869 36H37.9939L20.0055 18.003L38 0H17.9945Z"
+                          fill="#F36F2D"
+                        ></path>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_622_5547"
+                            x1="105"
+                            y1="17.9997"
+                            x2="66.9998"
+                            y2="17.9997"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#8AF43D"></stop>
+                            <stop offset="1" stop-color="#CBED3A"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="membership-detail__content">
+                    <ul class="detail-list">
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free Joining fee</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>One-off payment</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Unlimited training</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free parking</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free classes</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free drinking water</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free PT induction sessions</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="membership-register__btn">
+                    <a href="" class="register-btn">register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="membership__wrapper">
+                <div class="membership__content">
+                  <div id="twe-month" class="membership__img">
+                    <div class="img-wrap">
+                      <img
+                        src="../assets/img/membership3.png"
+                        alt=""
+                        class="membership-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="membership__details">
+                  <div class="membership-detail__title">
+                    <h2>12 months</h2>
+                    <div class="membership-detail__icon">
+                      <svg
+                        class="triple-arrow"
+                        width="105"
+                        height="36"
+                        viewBox="0 0 105 36"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M84.9945 0L66.9999 18.003L84.9884 36H104.994L87.0054 18.003L105 0H84.9945Z"
+                          fill="url(#paint0_linear_622_5547)"
+                        ></path>
+                        <path
+                          d="M51.9945 0L34 18.003L51.9884 36H71.9939L54.0055 18.003L72 0H51.9945Z"
+                          fill="#06A9D6"
+                        ></path>
+                        <path
+                          d="M17.9945 0L0 18.003L17.9869 36H37.9939L20.0055 18.003L38 0H17.9945Z"
+                          fill="#F36F2D"
+                        ></path>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_622_5547"
+                            x1="105"
+                            y1="17.9997"
+                            x2="66.9998"
+                            y2="17.9997"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#8AF43D"></stop>
+                            <stop offset="1" stop-color="#CBED3A"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="membership-detail__content">
+                    <ul class="detail-list">
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free Joining fee</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>One-off payment</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Unlimited training</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free parking</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free classes</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free drinking water</p>
+                      </li>
+                      <li class="detail-item">
+                        <p class="mem-item-icon">
+                          <img src="../assets/img/slash.png" alt="" />
+                        </p>
+                        <p>Free PT induction sessions</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="membership-register__btn">
+                    <a href="" class="register-btn">register</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

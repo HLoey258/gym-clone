@@ -43,9 +43,27 @@ const scrollReasonActive = () => {
 
 window.addEventListener("scroll", scrollReasonActive);
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper-membership", {
+  slidesPerView: 1,
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".button-next-member",
+    prevEl: ".button-prev-member",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3, // Hiển thị 3 phần tử trên desktop
+    },
+  },
+});
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".button-next-zone",
+    prevEl: ".button-prev-zone",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3, // Hiển thị 3 phần tử trên desktop
+    },
   },
 });
