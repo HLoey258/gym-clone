@@ -55,6 +55,18 @@ var swiper = new Swiper(".mySwiper-membership", {
     },
   },
 });
+var swiper = new Swiper(".mySwiper-related-art", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".button-next-related",
+    prevEl: ".button-prev-related",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3, // Hiển thị 3 phần tử trên desktop
+    },
+  },
+});
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   navigation: {
