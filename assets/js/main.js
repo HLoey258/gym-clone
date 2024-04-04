@@ -19,6 +19,34 @@ navCloseButton.addEventListener("click", () => {
 
 // Animation for reason item
 const reasonItems = document.querySelectorAll(".reason__list-item");
+const zoneBoxDesc = document.querySelectorAll(".zone__box-desc");
+const footerTitle = document.querySelector(".footer__title .section__fw");
+
+const scrollFooterActive = () => {
+  const scrollY = document.documentElement.scrollTop;
+  const currentFooterTitle = footerTitle.offsetHeight;
+  const currentTopHeight = footerTitle.offsetTop - 1000;
+  console.log(scrollY, currentFooterTitle, currentTopHeight);
+  if (
+    scrollY > currentTopHeight &&
+    scrollY <= currentTopHeight + currentFooterTitle
+  ) {
+    document
+      .querySelector(".footer__title .section__fw")
+      .classList.add("slide-right");
+    document
+      .querySelector(".footer__title .section__subtitle")
+      .classList.add("slide-right");
+  } else if (scrollY < currentTopHeight - 150) {
+    document
+      .querySelector(".footer__title .section__fw")
+      .classList.remove("slide-right");
+    document
+      .querySelector(".footer__title .section__subtitle")
+      .classList.remove("slide-right");
+  }
+};
+
 const scrollReasonActive = () => {
   const scrollY = document.documentElement.scrollTop;
   reasonItems.forEach((reason) => {
@@ -40,8 +68,32 @@ const scrollReasonActive = () => {
     }
   });
 };
+const scrollZoneBoxDesc = () => {
+  const scrollY = document.documentElement.scrollTop;
+  zoneBoxDesc.forEach((zoneBox) => {
+    const currentZoneBoxHeight = zoneBox.offsetHeight;
+    const currentTopHeight = zoneBox.offsetTop;
+    // console.log(scrollY, currentTopHeight, currentZoneBoxHeight);
+    const currentZoneBoxItem = zoneBox.getAttribute("id");
+
+    if (
+      scrollY - 900 > currentTopHeight &&
+      scrollY - 900 <= currentTopHeight + currentZoneBoxHeight
+    ) {
+      document
+        .querySelector(`.zone__data #${currentZoneBoxItem}`)
+        .classList.add("zone-box-appear");
+    } else {
+      document
+        .querySelector(`.zone__data #${currentZoneBoxItem}`)
+        .classList.remove("zone-box-appear");
+    }
+  });
+};
 
 window.addEventListener("scroll", scrollReasonActive);
+window.addEventListener("scroll", scrollZoneBoxDesc);
+window.addEventListener("scroll", scrollFooterActive);
 
 var swiper = new Swiper(".mySwiper-membership", {
   slidesPerView: 1,
@@ -51,7 +103,7 @@ var swiper = new Swiper(".mySwiper-membership", {
   },
   breakpoints: {
     768: {
-      slidesPerView: 3, // Hiển thị 3 phần tử trên desktop
+      slidesPerView: 3,
     },
   },
 });
@@ -63,7 +115,7 @@ var swiper = new Swiper(".mySwiper-related-art", {
   },
   breakpoints: {
     768: {
-      slidesPerView: 3, // Hiển thị 3 phần tử trên desktop
+      slidesPerView: 3,
     },
   },
 });
@@ -75,7 +127,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     768: {
-      slidesPerView: 3, // Hiển thị 3 phần tử trên desktop
+      slidesPerView: 3,
     },
   },
 });
