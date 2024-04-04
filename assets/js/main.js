@@ -26,7 +26,6 @@ const scrollFooterActive = () => {
   const scrollY = document.documentElement.scrollTop;
   const currentFooterTitle = footerTitle.offsetHeight;
   const currentTopHeight = footerTitle.offsetTop - 1000;
-  console.log(scrollY, currentFooterTitle, currentTopHeight);
   if (
     scrollY > currentTopHeight &&
     scrollY <= currentTopHeight + currentFooterTitle
@@ -72,18 +71,17 @@ const scrollZoneBoxDesc = () => {
   const scrollY = document.documentElement.scrollTop;
   zoneBoxDesc.forEach((zoneBox) => {
     const currentZoneBoxHeight = zoneBox.offsetHeight;
-    const currentTopHeight = zoneBox.offsetTop;
-    // console.log(scrollY, currentTopHeight, currentZoneBoxHeight);
+    const currentTopHeight = zoneBox.offsetTop + 900;
     const currentZoneBoxItem = zoneBox.getAttribute("id");
 
     if (
-      scrollY - 900 > currentTopHeight &&
-      scrollY - 900 <= currentTopHeight + currentZoneBoxHeight
+      scrollY > currentTopHeight &&
+      scrollY <= currentTopHeight + currentZoneBoxHeight
     ) {
       document
         .querySelector(`.zone__data #${currentZoneBoxItem}`)
         .classList.add("zone-box-appear");
-    } else {
+    } else if (scrollY < currentTopHeight) {
       document
         .querySelector(`.zone__data #${currentZoneBoxItem}`)
         .classList.remove("zone-box-appear");

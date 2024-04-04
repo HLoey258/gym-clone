@@ -435,7 +435,7 @@ img {
 }
 .line__wrap .line:nth-child(1) {
   position: absolute;
-  width: 18px;
+  width: 1.04167rem;
   height: calc(var(--box-height) * 0.66354);
   top: 54%;
   left: 22%;
@@ -443,7 +443,7 @@ img {
 }
 .line__wrap .line:nth-child(2) {
   position: absolute;
-  width: 18px;
+  width: 1.04167rem;
   height: calc(var(--box-height) * 0.333);
   top: 56%;
   left: 36%;
@@ -451,7 +451,7 @@ img {
 }
 .line__wrap .line:nth-child(3) {
   position: absolute;
-  width: 18px;
+  width: 1.04167rem;
   height: calc(var(--box-height) * 0.23625);
   top: 66%;
   left: 58.55%;
@@ -604,8 +604,7 @@ img {
   }
 }
 .zone-box-appear {
-  animation-delay: 3000ms;
-  animation: slideRight 0.8s ease-out;
+  animation: slideRight 1.2s ease-out;
   opacity: 1;
 }
 .zone__box-desc {
@@ -929,7 +928,7 @@ img {
   padding-left: 0.78125rem;
 }
 .slide-right {
-  animation-delay: 3000ms;
+  animation-delay: 10000ms;
   animation: slideRight 1.3s ease-in-out;
 }
 .footer__title .section__fw {
@@ -1027,7 +1026,6 @@ img {
 }
 .footer__img {
   margin-top: 1.5625rem;
-
   object-fit: cover;
 }
 
@@ -1042,4 +1040,81 @@ img {
   line-height: 1.14583rem;
   color: var(--body-color);
   font-size: 14px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 330px) {
+  #main {
+    margin-top: 54px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #main {
+    margin-top: 58px;
+  }
+  .banner__service {
+    column-gap: 1.4rem;
+  }
+  .line__wrap .line:nth-child(1) {
+    top: 63%;
+    left: 23%;
+  }
+  .line__wrap .line:nth-child(2) {
+    top: 65%;
+    height: calc(var(--box-height) * 0.312);
+  }
+  .line__wrap .line:nth-child(3) {
+    top: 70%;
+  }
+  .membership__details {
+    margin-top: -5.7rem;
+  }
+  .advertise__img div {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* MEDIUM SCREEN */
+@media screen and (min-width: 540px) {
+  #main {
+    margin-top: 84px;
+  }
+  .banner__service {
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner__service-item {
+    gap: 1.2rem;
+  }
+  .line__wrap .line:nth-child(1) {
+    top: 47%;
+    left: 21%;
+  }
+  .line__wrap .line:nth-child(2) {
+    top: 50.5%;
+    height: calc(var(--box-height) * 0.278);
+  }
+  .line__wrap .line:nth-child(3) {
+    top: 57%;
+  }
+  .reason__desc {
+    width: 143px;
+  }
+  .zone__box-desc {
+    margin-top: -8.129167rem;
+  }
+}
+/* PC screen */
+@media screen and (min-width: 1024px) {
+  #head {
+    width: 100vw;
+  }
+  .head__logo div {
+    width: 140px;
+    height: 45px;
+  }
+  .head__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
