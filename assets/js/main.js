@@ -100,8 +100,8 @@ var swiper = new Swiper(".mySwiper-membership", {
     prevEl: ".button-prev-member",
   },
   breakpoints: {
-    768: {
-      slidesPerView: 3,
+    1024: {
+      slidesPerView: 2,
     },
   },
 });
@@ -112,7 +112,7 @@ var swiper = new Swiper(".mySwiper-related-art", {
     prevEl: ".button-prev-related",
   },
   breakpoints: {
-    768: {
+    1024: {
       slidesPerView: 3,
     },
   },
@@ -124,8 +124,8 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".button-prev-zone",
   },
   breakpoints: {
-    768: {
-      slidesPerView: 3,
+    1024: {
+      slidesPerView: 2,
     },
   },
 });
